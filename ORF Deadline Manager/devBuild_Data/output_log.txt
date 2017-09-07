@@ -1,0 +1,37 @@
+Mono path[0] = 'C:/Users/Holly/Documents/TotallyNotORFDM-/ORF Deadline Manager/devBuild_Data/Managed'
+Mono path[1] = 'C:/Users/Holly/Documents/TotallyNotORFDM-/ORF Deadline Manager/devBuild_Data/Mono'
+Mono config path = 'C:/Users/Holly/Documents/TotallyNotORFDM-/ORF Deadline Manager/devBuild_Data/Mono/etc'
+PlayerConnection initialized from C:/Users/Holly/Documents/TotallyNotORFDM-/ORF Deadline Manager/devBuild_Data (debug = 0)
+PlayerConnection initialized network socket : 0.0.0.0 55442
+Multi-casting "[IP] 10.0.0.184 [Port] 55442 [Flags] 2 [Guid] 1053720856 [EditorId] 2662044006 [Version] 1048832 [Id] WindowsPlayer(LAPTOP-U80J25T1) [Debug] 0" to [225.0.0.222:54997]...
+Started listening to [0.0.0.0:55442]
+PlayerConnection already initialized - listening to [0.0.0.0:55442]
+Player data archive not found at `C:/Users/Holly/Documents/TotallyNotORFDM-/ORF Deadline Manager/devBuild_Data/data.unity3d`, using local filesystemInitialize engine version: 5.6.1f1 (2860b30f0b54)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: Intel(R) HD Graphics 520 (ID=0x1916)
+    Vendor:   Intel
+    VRAM:     2111 MB
+    Driver:   21.20.16.4534
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\Holly\Documents\TotallyNotORFDM-\ORF Deadline Manager\devBuild_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Holly\Documents\TotallyNotORFDM-\ORF Deadline Manager\devBuild_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Holly\Documents\TotallyNotORFDM-\ORF Deadline Manager\devBuild_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Holly\Documents\TotallyNotORFDM-\ORF Deadline Manager\devBuild_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\Holly\Documents\TotallyNotORFDM-\ORF Deadline Manager\devBuild_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\Holly\Documents\TotallyNotORFDM-\ORF Deadline Manager\devBuild_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\Holly\Documents\TotallyNotORFDM-\ORF Deadline Manager\devBuild_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\Holly\Documents\TotallyNotORFDM-\ORF Deadline Manager\devBuild_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+- Completed reload, in  0.039 seconds
+Platform assembly: C:\Users\Holly\Documents\TotallyNotORFDM-\ORF Deadline Manager\devBuild_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\Holly\Documents\TotallyNotORFDM-\ORF Deadline Manager\devBuild_Data\Managed\System.dll (this message is harmless)
+desktop: 1366x768 60Hz; virtual: 2646x768 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 2.106466 ms
+Platform assembly: C:\Users\Holly\Documents\TotallyNotORFDM-\ORF Deadline Manager\devBuild_Data\Managed\System.Xml.dll (this message is harmless)
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 4124 -> priority: 1 
+  Thread -> id: 4308 -> priority: 1 

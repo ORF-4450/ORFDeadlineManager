@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<DeadlineDB xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <DeadLineList>
+    <DeadLineEntry>
+      <Author>test</Author>
+      <Title>test</Title>
+      <DueDate>test</DueDate>
+      <Description>test</Description>
+    </DeadLineEntry>
+    <DeadLineEntry>
+      <Author>test2</Author>
+      <Title>test2</Title>
+      <DueDate>test2</DueDate>
+      <Description>test2</Description>
+    </DeadLineEntry>
+    <DeadLineEntry>
+      <Author>test3</Author>
+      <Title>test3</Title>
+      <DueDate>test3</DueDate>
+      <Description>test3</Description>
+    </DeadLineEntry>
+  </DeadLineList>
+</DeadlineDB>
