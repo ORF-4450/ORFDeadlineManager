@@ -10,6 +10,9 @@ public class ScrollbarAutoScroller : MonoBehaviour {
     public Scrollbar scrollbar;
     public float speed = 10f, percentageDone = 0.99f, paddingInSeconds = 0.2f;
     public ScrollMode mode = ScrollMode.startOver;
+    public GameObject listsize;
+
+    
 
     public enum ScrollMode
     {
@@ -22,6 +25,7 @@ public class ScrollbarAutoScroller : MonoBehaviour {
 
     void Start()
     {
+      //  listsize = listsize.GetComponent<RectTransform>().rect.height
         if ((scrollbar = GetComponent<Scrollbar>()) == null)
         {
             if ((scrollbar = GetComponentInParent<Scrollbar>()) == null)
@@ -31,7 +35,7 @@ public class ScrollbarAutoScroller : MonoBehaviour {
     }
 
 	void Update () {
-
+        
         if (mode == ScrollMode.none)
             return;
 
@@ -50,7 +54,7 @@ public class ScrollbarAutoScroller : MonoBehaviour {
         else
             scrollbar.value = Mathf.LerpUnclamped(1, 0, scrollTimer);
 
-        scrollTimer += Time.deltaTime * speed;
+        scrollTimer += Time.deltaTime * (100 / listsize.GetComponent<RectTransform>().rect.height);
 
     }
 

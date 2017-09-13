@@ -15,12 +15,14 @@ public class AnnouncementCreatorScript : MonoBehaviour
             try
             {
                 writer.Write(Announcement.text);
+               
             }
             catch
             {
                 Debug.LogWarning("Could not write message to splashMessage.txt!");
             }
+            
         }
-
+        
     }
 }

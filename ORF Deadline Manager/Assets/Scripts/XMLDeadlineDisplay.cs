@@ -186,7 +186,7 @@ public class XMLDeadlineDisplay : MonoBehaviour
                     sorted[1].Add(d);
                     break;
 
-                case "photo video":
+                case "media":
                     sorted[2].Add(d);
                     break;
 
@@ -225,7 +225,7 @@ public class XMLDeadlineDisplay : MonoBehaviour
                             title.GetComponentInChildren<Text>().text = "Programming Team";
                             break;
                         case 2:
-                            title.GetComponentInChildren<Text>().text = "Photo/Video Team";
+                            title.GetComponentInChildren<Text>().text = "Media Team";
                             break;
                         case 3:
                             title.GetComponentInChildren<Text>().text = "Business Team";

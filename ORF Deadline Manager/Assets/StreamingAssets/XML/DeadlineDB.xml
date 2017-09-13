@@ -2,13 +2,6 @@
 <DeadlineDB xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <DeadLineList>
     <DeadLineEntry>
-      <Author>test3</Author>
-      <Title>test3</Title>
-      <DueDate>08/18/2017</DueDate>
-      <Description>test3</Description>
-      <Team>chairman</Team>
-    </DeadLineEntry>
-    <DeadLineEntry>
       <Author>Author</Author>
       <Title>this is a test</Title>
       <DueDate>09/09/2017</DueDate>
@@ -20,13 +13,6 @@
       <Title>Flamethrower robot</Title>
       <DueDate>02/28/2018</DueDate>
       <Description>now legal in FIRST</Description>
-      <Team>Programming</Team>
-    </DeadLineEntry>
-    <DeadLineEntry>
-      <Author>Holly</Author>
-      <Title>testing title</Title>
-      <DueDate>08/01/2017</DueDate>
-      <Description>this is a test of the flashing colors</Description>
       <Team>Programming</Team>
     </DeadLineEntry>
   </DeadLineList>
