@@ -5,6 +5,7 @@ using System.Collections;
 public class AnnouncementCreatorScript : MonoBehaviour
 {
     public Text Announcement;
+    public InputField AnnouncementInput;
     public Text AnnouncementDisplay;
     
     public void DisplayAnnouncement()
@@ -15,7 +16,7 @@ public class AnnouncementCreatorScript : MonoBehaviour
             try
             {
                 writer.Write(Announcement.text);
-               
+                AnnouncementInput.text = "";
             }
             catch
             {
