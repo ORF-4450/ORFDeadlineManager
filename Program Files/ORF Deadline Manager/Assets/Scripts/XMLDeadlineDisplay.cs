@@ -38,7 +38,7 @@ public class XMLDeadlineDisplay : MonoBehaviour
     {
         timer += Time.deltaTime;      
 
-        if (timer >= 2f)
+        if (timer >= 0.7f)
         {
             timer = 0;
             foreach (Image img in pastDeadlines)
