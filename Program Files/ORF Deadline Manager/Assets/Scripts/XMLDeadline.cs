@@ -70,12 +70,12 @@ public class XMLDeadline : MonoBehaviour {
                 break;
             }
 
-        foreach (DeadLineEntry ded in deadlineDB.DeadLineList) //I realize that "deadline" and "ded" aren't the right names, but what were you thinking when you put them in as filler? b/c I got no clue
+        foreach (DeadLineEntry ded in deadlineDB.DeadLineList) 
         {
             
-            if (title.ToLower() == ded.Title.ToLower()) //ded.DeadLineEntry.ToLower() || ded is already of the type DeadLineEntry, what we want to get is the variable Title of ded
+            if (title.ToLower() == ded.Title.ToLower()) 
             {
-                deadlineDB.DeadLineList.Remove(ded); //Remove the entry from the list that matches with the title
+                deadlineDB.DeadLineList.Remove(ded);
                 SaveDeadline();
                 SceneManager.LoadScene("Deadlines");
                 break;

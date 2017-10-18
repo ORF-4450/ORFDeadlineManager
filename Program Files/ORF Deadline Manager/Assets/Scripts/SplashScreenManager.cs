@@ -54,6 +54,7 @@ public class SplashScreenManager : MonoBehaviour {
         Debug.Log(buffer);
         buffer = scroller.mode;
         scroller.mode = ScrollbarAutoScroller.ScrollMode.none;
+        yield return new WaitForSeconds(1);
         foreach (Graphic cv in GetComponentsInChildren<Graphic>())
         {
             cv.CrossFadeAlpha(1, fadeInDuration, true);

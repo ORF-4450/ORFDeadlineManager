@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ScrollbarAutoScroller : MonoBehaviour {
+public class ScrollbarAutoScroller : MonoBehaviour
+{
 
 
 
@@ -12,7 +13,7 @@ public class ScrollbarAutoScroller : MonoBehaviour {
     public ScrollMode mode = ScrollMode.startOver;
     public GameObject listsize;
 
-    
+
 
     public enum ScrollMode
     {
@@ -25,7 +26,7 @@ public class ScrollbarAutoScroller : MonoBehaviour {
 
     void Start()
     {
-      //  listsize = listsize.GetComponent<RectTransform>().rect.height
+
         if ((scrollbar = GetComponent<Scrollbar>()) == null)
         {
             if ((scrollbar = GetComponentInParent<Scrollbar>()) == null)
@@ -34,8 +35,9 @@ public class ScrollbarAutoScroller : MonoBehaviour {
         scrollbar.value = 1;
     }
 
-	void Update () {
-        
+    void Update() 
+    {
+
         if (mode == ScrollMode.none)
             return;
 
@@ -48,18 +50,20 @@ public class ScrollbarAutoScroller : MonoBehaviour {
             }
             else
                 timer = 0;
-
+           // StartCoroutine(Sleep());
             ReachedEnd();
+           
         }
         else
-            scrollbar.value = Mathf.LerpUnclamped(1, 0, scrollTimer);
-
+    
+        scrollbar.value = Mathf.LerpUnclamped(1, 0, scrollTimer);
         scrollTimer += Time.deltaTime * (100 / listsize.GetComponent<RectTransform>().rect.height);
 
     }
 
     public void ReachedEnd()
     {
+        
         switch (mode)
         {
             case ScrollMode.backtrack:
@@ -76,4 +80,10 @@ public class ScrollbarAutoScroller : MonoBehaviour {
                 break;
         }
     }
+
+   /* public IEnumerator Sleep()
+    {
+        yield return new WaitForSeconds(3f);
+    }*/
+
 }
