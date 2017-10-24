@@ -9,7 +9,7 @@ public class ScrollbarAutoScroller : MonoBehaviour
 
 
     public Scrollbar scrollbar;
-    public float speed = 10f, percentageDone = 0.99f, paddingInSeconds = 0.2f;
+    public float speed = 10f, percentageDone = 0.99f, paddingInSeconds = 0.2f, waitForSecondsAtStart = 0.2f;
     public ScrollMode mode = ScrollMode.startOver;
     public GameObject listsize;
 
@@ -41,7 +41,10 @@ public class ScrollbarAutoScroller : MonoBehaviour
         if (mode == ScrollMode.none)
             return;
 
-        if (scrollbar.value <= (1 - percentageDone) && speed > 0 || scrollbar.value >= (1 - percentageDone) && speed < 0)
+        if (scrollbar.value == 1 && (timer += Time.deltaTime) < waitForSecondsAtStart)
+            return;
+
+        else if (scrollbar.value <= (1 - percentageDone) && speed > 0 || scrollbar.value >= (1 - percentageDone) && speed < 0)
         {
 
             if ((timer += Time.deltaTime) < paddingInSeconds)
@@ -50,12 +53,11 @@ public class ScrollbarAutoScroller : MonoBehaviour
             }
             else
                 timer = 0;
-           // StartCoroutine(Sleep());
+            //StartCoroutine(Sleep());
             ReachedEnd();
            
         }
-        else
-    
+
         scrollbar.value = Mathf.LerpUnclamped(1, 0, scrollTimer);
         scrollTimer += Time.deltaTime * (100 / listsize.GetComponent<RectTransform>().rect.height);
 
@@ -72,8 +74,10 @@ public class ScrollbarAutoScroller : MonoBehaviour
                 break;
 
             case ScrollMode.startOver:
+                
                 scrollbar.value = 1;
                 scrollTimer = 0;
+                timer = 0;
                 break;
 
             default:
@@ -81,9 +85,9 @@ public class ScrollbarAutoScroller : MonoBehaviour
         }
     }
 
-   /* public IEnumerator Sleep()
+   /*public IEnumerator Sleep()
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(10);
     }*/
 
 }

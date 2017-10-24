@@ -15,5 +15,12 @@
       <Description>now legal in FIRST</Description>
       <Team>Programming</Team>
     </DeadLineEntry>
+    <DeadLineEntry>
+      <Author>Fluff Guy</Author>
+      <Title>Fluff entry</Title>
+      <DueDate>12/09/2018</DueDate>
+      <Description>This is a fluff entry to test the pauses</Description>
+      <Team>Build</Team>
+    </DeadLineEntry>
   </DeadLineList>
 </DeadlineDB>
