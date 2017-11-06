@@ -18,7 +18,7 @@ public class XMLDeadline : MonoBehaviour {
    public InputField Description;
    public InputField DueDate;
    public InputField Author;
-   public InputField Team;
+   public Dropdown Team;
 
    public Button SubmitButton;
    public Button CompletedButton;
@@ -49,7 +49,7 @@ public class XMLDeadline : MonoBehaviour {
         Description.text = "";
         DueDate.text = "";
         Author.text = "";
-        Team.text = "";
+        //Team.text = "";
 
     }
 
@@ -111,7 +111,7 @@ public class XMLDeadline : MonoBehaviour {
         }
         else
         {
-            DeadLineEntry entry = new DeadLineEntry(Title.text, Description.text, DueDate.text, Author.text, Team.text);
+            DeadLineEntry entry = new DeadLineEntry(Title.text, Description.text, DueDate.text, Author.text, Team.captionText.text);
             deadlineDB.DeadLineList.Add(entry);
             SaveDeadline();
             SceneManager.LoadScene("Deadlines");

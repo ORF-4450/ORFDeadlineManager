@@ -17,9 +17,9 @@ public class XMLDeadlineDisplay : MonoBehaviour
     public XMLDeadline xmlDeadLineScript;
 
     public GameObject deadLinePrefab, entryList, teamPrefab;
-    public float cellMargin = 10; //Deprecated, clean up coming soon
+    public float cellMargin = 10; //Clean up coming soon
 
-    Transform listEnd; //Deprecated, clean up coming soon
+    Transform listEnd; //Clean up coming soon
     List<Image> pastDeadlines = new List<Image>();
 
     float timer = 0;
@@ -160,7 +160,7 @@ public class XMLDeadlineDisplay : MonoBehaviour
 
     IEnumerator PlaceEntryByTeam(List<string[]> deadlines)
     {
-        List<string[]>[] sorted = new List<string[]>[7];
+        List<string[]>[] sorted = new List<string[]>[9];
         for (int i = 0; i <sorted.Length; i++)
             sorted[i] = new List<string[]>();
 
@@ -173,37 +173,47 @@ public class XMLDeadlineDisplay : MonoBehaviour
          * [4] = Spirit & Outreach Team
          * [5] = Chairman's Team
          * [6] = Other
+         * [7] = Important Dates
+         * [8] = ERROR ENTRIES, something went wrong in the entry making process
          */
         foreach (string[] d in deadlines)
         {
-            switch (d[4].ToLower())
+            switch (d[4])
             {
-                case "build":
+                case "Build Team":
                     sorted[0].Add(d);
                     break;
 
-                case "programming":
+                case "Programming Team":
                     sorted[1].Add(d);
                     break;
 
-                case "media":
+                case "Media Team":
                     sorted[2].Add(d);
                     break;
 
-                case "business":
+                case "Business Team":
                     sorted[3].Add(d);
                     break;
 
-                case "spirit":
+                case "Spirit Team":
                     sorted[4].Add(d);
                     break;
 
-                case "chairman":
+                case "Chairman's Team":
                     sorted[5].Add(d);
                     break;
 
-                default:
+                case "Other":
                     sorted[6].Add(d);
+                    break;
+
+                case "Important Dates":
+                    sorted[7].Add(d);
+                    break;
+
+                default:
+                    sorted[8].Add(d);
                     break;
             }
         }
@@ -237,7 +247,13 @@ public class XMLDeadlineDisplay : MonoBehaviour
                             title.GetComponentInChildren<Text>().text = "Chairman's Team";
                             break;
                         case 6:
-                            title.GetComponentInChildren<Text>().text = "Other";
+                            title.GetComponentInChildren<Text>().text = "Other/Misc";
+                            break;
+                        case 7:
+                            title.GetComponentInChildren<Text>().text = "Important Dates";
+                            break;
+                        case 8:
+                            title.GetComponentInChildren<Text>().text = "ERROR IN ENTRY";
                             break;
                     }
                 }

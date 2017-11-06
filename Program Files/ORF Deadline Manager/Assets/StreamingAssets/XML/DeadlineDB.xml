@@ -22,5 +22,12 @@
       <Description>This is a fluff entry to test the pauses</Description>
       <Team>Build</Team>
     </DeadLineEntry>
+    <DeadLineEntry>
+      <Author>No lead</Author>
+      <Title>esdrtfgyuhjki</Title>
+      <DueDate>09/20/2018</DueDate>
+      <Description>azsdfghjk</Description>
+      <Team>Spirit Team</Team>
+    </DeadLineEntry>
   </DeadLineList>
 </DeadlineDB>
